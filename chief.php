@@ -3,9 +3,9 @@
 <html>
 <body>
 
-<div id="container" style="width:1000px;border:3px solid black;">
+<div id="container" style="width:1300px;border:3px solid black;">
 
-<div id="header" style="background-color:#53CF29;height:60px;width:920px;float:left;"><center>
+<div id="header" style="background-color:#53CF29;height:60px;width:1220px;float:left;"><center>
 <h1 style="margin-bottom:0;">Chief Security Officer</h1>
 </center>
 </div>
@@ -47,8 +47,9 @@
 </FORM>
 </div>
 
-<div id="content" style="background-color:#EEEEEE;height:394px;width:764px;float:left;border:3px solid black;">
-
+<div id="content" style="background-color:#EEEEEE;height:394px;width:1064px;float:left;border:3px solid black; #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+<center>
+<h3>New Requests</h3>
  <table border="1">
   <thead>
    <tr>
@@ -63,8 +64,6 @@
    <th>Phone</th>
    <th>Approve/Reject</th>
    </tr>
-   
-
 <?php
 ob_start();
 session_start();
@@ -82,7 +81,6 @@ $query = "SELECT *
 $result = mysql_query($query);
  while($row = mysql_fetch_array($result)) {
             ?>
-             
                 <tr>
                 <td><?php echo $row['requestID']?></td>
                 <td><?php echo $row['userID']?></td>
@@ -93,8 +91,10 @@ $result = mysql_query($query);
                 <td><?php echo $row['model']?></td>
                 <td><?php echo $row['date']?></td>
                 <td><?php echo $row['phoneNumber']?></td>
-            <td> <?php echo"  <a href = 'approve.php?approve=$row[requestID]'>Approve</a> <a href = 'reject.php?reject=$row[requestID]'>Reject </a>" ?></td>
-                </tr><br>
+            <td> <?php echo"  <a href = 'approve.php?approve=$row[requestID]'>Approve</a> <a href = 'reject.php?reject=$row[requestID]'>Reject </a>
+            <a href = 'block.php?block=$row[requestID]'>Block </a>"
+            ?></td>
+                </tr>
 <?php
  }
 mysql_close();
@@ -102,7 +102,7 @@ mysql_close();
 </thead>
    <tbody>
    </table>
-
+</center>
 </div>
 
 <div id="content1" style="background-color:#C2FFAD;height:400px;width:30px;float:left;">

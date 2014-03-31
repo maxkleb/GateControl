@@ -23,6 +23,17 @@ $phoneNumber = $_POST['phoneNumber'];
 $conn = mysql_connect('localhost', 'root', '');
 mysql_select_db('matala_3', $conn);
 
+
+$query ="SELECT * FROM blacklist
+where userID = '$userID';";
+$result = mysql_query($query);
+
+if(mysql_num_rows($result) != 0) 
+{
+    header('Location: secretary_block.html');
+    exit();
+}
+
 $result = mysql_query("SELECT * FROM requesttable", $conn);
 $num_rows = mysql_num_rows($result); 
 
