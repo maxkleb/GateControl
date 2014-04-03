@@ -21,7 +21,7 @@
 </FORM>
 
 <br>
-<FORM METHOD="Find" action="chief_find.html">
+<FORM METHOD="Find" action="chief_find.php">
 <INPUT type="submit" value="Search by ID"> 
 </FORM>
 
@@ -47,18 +47,26 @@
 
 <div id="content" style="background-color:#EEEEEE;height:394px;width:764px;float:left;border:3px solid black;">
 <form id="findForm" name="findForm" action="chief_find.php" method="post">
-<table width="300" align="center">
-<tr>
-<td colspan="10" align="center"><h3>Search by request ID</h3></td>
-</tr>
-<tr>
-<td>Enter ID: </td>
-<td><input type="text" name="userID" /></td>
-<td>&nbsp;</td>
-<td><input type="submit" align="center"  value="Submit" /></td>
-</tr>
-</table>
-</form>
+<?php /*
+------------------Find User form Approval table by ID---------------- 
+
+$userID = $_POST['userID'];
+$userID = mysql_real_escape_string($userID);
+$query = "SELECT *
+    FROM requesttable
+    where userID = '$userID'";
+    
+$result = mysql_query($query);
+if(mysql_num_rows($result) == 0) 
+{
+    header('Location: chief_find.html');
+    exit();
+}
+$row = mysql_fetch_array($result);
+*/
+?>
+
+
 </div>
 
 <div id="content1" style="background-color:#C2FFAD;height:400px;width:30px;float:left;">
