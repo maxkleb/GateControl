@@ -24,27 +24,9 @@
 
 <br>
 <FORM METHOD="Find" action="chief_find.html">
-<INPUT type="submit" value="Search by request ID"> 
+<INPUT type="submit" value="Search by ID"> 
 </FORM>
 
-<br>
-<FORM METHOD="request" action="secretary_request.html">
-<INPUT type="submit" value="Submition request">
-</FORM>
-
-<br>
-<FORM METHOD="request" action="login.html">
-<INPUT type="submit" value="Updating personal detalis">
-</FORM>
-
-<br>
-<FORM METHOD="request" action="login.html">
-<INPUT type="submit" value="Accsess to personal detalis">
-</FORM>
-<br>
-<FORM METHOD="request" action="secretary_request.html">
-<INPUT type="submit" value="Submition request">
-</FORM>
 </div>
 
 <div id="content" style="background-color:#EEEEEE;height:394px;width:1064px;float:left;border:3px solid black; #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">

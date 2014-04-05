@@ -5,7 +5,7 @@
 <div id="container" style="width:1000px;border:3px solid black;">
 
 <div id="header" style="background-color:#53CF29;height:60px;width:920px;float:left;"><center>
-<h1 style="margin-bottom:0;">System Admin</h1>
+<h1 style="margin-bottom:0;">Simulation System</h1>
 </center>
 </div>
 
@@ -14,25 +14,27 @@
 </FORM></div>
 
 <div id="menu" style="background-color:#C2FFAD;height:400px;width:200px;float:left;">
-<b><center>options :</center></b>
 <br>
-<FORM METHOD="Register" action="admin_register.html">
-<INPUT type="submit" value="Register new Users"> 
-</FORM>
-
-<br>
-<FORM METHOD="remove" action="admin_remove.html">
-<INPUT type="submit" value="Remove a user">
-</FORM>
-
-<br>
-<FORM METHOD="statistics" action="login.html">
-<INPUT type="submit" value="statistics">
+<FORM METHOD="test" action="simulation.html">
+<INPUT type="submit" value="Enter Car Number">
 </FORM>
 </div>
 
 <div id="content" style="background-color:#EEEEEE;height:394px;width:764px;float:left;border:3px solid black;">
-<h3>Thank you, new user has been approved.</h3></div>
+<form id="registerForm" name="isterregForm" action="simulation.php" method="post">
+<table width="300" align="center" >
+<tr>
+<td colspan="10" align="center"><h3>Simulation</h3></td>
+</tr>
+<tr>
+<td>Enter car number: </td>
+<td><input type="text" name="carNumber" /></td>
+<td>&nbsp;</td>
+<td><input type="submit" align="center"  value="Submit" /></td>
+</tr>
+</table>
+</form>
+</div>
 
 <div id="content1" style="background-color:#C2FFAD;height:400px;width:30px;float:left;">
 </div>
