@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 02, 2014 at 02:56 PM
+-- Generation Time: Apr 06, 2014 at 12:36 AM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -46,8 +46,7 @@ CREATE TABLE IF NOT EXISTS `approvedtable` (
 --
 
 INSERT INTO `approvedtable` (`RequestID`, `userID`, `firstName`, `lastName`, `task`, `carNumber`, `model`, `date`, `ApprovedBy`, `phoneNumber`, `status`, `approved number`) VALUES
-(2, 0, 'wq', 'qw', 'qw', 'qw', '', '2014-03-30 21:00:00', 'Chief Officer', '', 'Approved', 0),
-(12, 111, '111', '111', '', '', '', '2014-03-31 21:00:00', 'Chief Officer', '', 'Approved', 0);
+(2, 0, 'wq', 'qw', 'qw', 'qw', '', '2014-03-30 21:00:00', 'Chief Officer', '', 'Approved', 0);
 
 -- --------------------------------------------------------
 
@@ -72,28 +71,31 @@ INSERT INTO `blacklist` (`userID`, `firstName`, `lastName`, `reason`) VALUES
 ('111', 'max', 'kakas', ''),
 ('1', '', '', ''),
 ('0', 'q', 'q', ''),
-('111', '', '', '');
+('111', '', '', ''),
+('111', '111', '111', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `member`
+-- Table structure for table `journal`
 --
 
-CREATE TABLE IF NOT EXISTS `member` (
-  `username` text NOT NULL,
-  `password` text NOT NULL,
-  `email` text NOT NULL,
-  `salt` text NOT NULL
+CREATE TABLE IF NOT EXISTS `journal` (
+  `userID` text NOT NULL,
+  `firstName` text NOT NULL,
+  `lastName` text NOT NULL,
+  `carNumber` text NOT NULL,
+  `model` text NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `approvedBy` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `member`
+-- Dumping data for table `journal`
 --
 
-INSERT INTO `member` (`username`, `password`, `email`, `salt`) VALUES
-('mama', '27d357b304e146729eba03064b0dba88e7db77966d4b9285771b7251c2d04d7b', 'dckncs@kdc.cf', 'd50'),
-('pituh', '38905fbc3f98a0a0255f4ddb322ebc3c45f918aebd5bbb68b199be700a5d42c5', 'dckncs@kdc.cf', 'ef5');
+INSERT INTO `journal` (`userID`, `firstName`, `lastName`, `carNumber`, `model`, `date`, `approvedBy`) VALUES
+('0', 'wq', 'qw', 'qw', '', '2014-04-05 01:33:54', 'Chief');
 
 -- --------------------------------------------------------
 
@@ -160,10 +162,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`username`, `password`, `type`, `salt`) VALUES
 ('w', 'ffc66ece8a1abf12b601c8d4e1d7340bd2c5b1f1237b9dc69afe7ce2783e26e6', 'r', 'bb7'),
-('max', 'c601a219f66fbc4e3ea9d938cb9141497549bce609329dcaa95632eba1a2a043', 'admin', '998'),
 ('q', '719eceed0bd171972ae475334c03902cec7314237f90b8f2d79f332ed8b651a9', 'admin', 'c27'),
 ('www', '095d23ee9041277180a878b6687822eed2d5449cb275e62eb57d4700789bde97', 'secretary', '0e8'),
-('', '', '', ''),
 ('', '', '', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
