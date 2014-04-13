@@ -14,7 +14,7 @@ $conn = mysql_connect('localhost', 'root', '');
 mysql_select_db('matala_3', $conn);
 
 $ID = mysql_real_escape_string($ID);
-$query = "SELECT firstname , lastname
+$query = "SELECT *
     FROM approvedtable
     WHERE 	userID = '$ID';";
 
@@ -44,6 +44,9 @@ $result = mysql_query($query);
 <INPUT type="submit" value="Accsess to personal detalis">
 </FORM>
 <br>
+<FORM METHOD="request" action="gate_enter.html">
+<INPUT type="submit" value="Fast Enter Form">
+</FORM><br>
 </FORM>
 </div>
 
@@ -58,9 +61,27 @@ $result = mysql_query($query);
 } 
 else
 {
-$row = mysql_fetch_array( $result ); 
-Print "<b>Name:</b> ".$row['firstname'] . "   "; 
-Print "<b></b> ".$row['lastname'] . " <br>";
+
+$row = mysql_fetch_array( $result );
+Print "<b></b> ".$row['firstName'] . "   ";
+Print "<b></b> ".$row['lastName'] . "   "; 
+Print "<b></b> ".$row['carNumber'] . "   ";  
+Print "<b></b> ".$row['task'] . " <br>";
+
+$userID = $row['userID'];
+$firstName = $row['firstName'];
+$lastName = $row['lastName'];
+$carNumber = $row['carNumber'];
+$model = $row['model'];
+
+
+$userID = mysql_real_escape_string($userID);
+$status = "wait";
+
+$query = "INSERT INTO journal (userID,firstName,lastName,carNumber,model)
+VALUES ('$userID','$firstName','$lastName','$carNumber','$model');";
+mysql_query($query);
+
 echo '<tr>
 <td colspan="10" align="center"><h3>ALLOW ACCESS</h3></td>
 </tr>';
