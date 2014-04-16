@@ -5,7 +5,7 @@
 <div id="container" style="width:1000px;border:3px solid black;">
 
 <div id="header" style="background-color:#53CF29;height:60px;width:920px;float:left;"><center>
-<h1 style="margin-bottom:0;">Secretary</h1>
+<h1 style="margin-bottom:0;">Gate Gard</h1>
 </center>
 </div>
 
@@ -15,21 +15,23 @@
 
 <div id="menu" style="background-color:#C2FFAD;height:400px;width:200px;float:left;">
 <b><center>options :</center></b>
+
 <br>
-<FORM METHOD="request" action="secretary_request.html">
-<INPUT type="submit" value="Submition request">
+<FORM METHOD="request" action="gate.html">
+<INPUT type="submit" value="Accsess to personal detalis">
 </FORM><br>
-<FORM METHOD="request" action="secretary_update.html">
-<INPUT type="submit" value="Updating personal detalis">
+<FORM METHOD="request" action="gate_enter.html">
+<INPUT type="submit" value="Fast Enter Form">
 </FORM><br>
+<br>
+</FORM>
 </div>
 
 <div id="content" style="background-color:#EEEEEE;height:394px;width:764px;float:left;border:3px solid black;">
-<center><h3>Submition request</h3></center>
-<form id="requestForm" name="requestForm" action="request.php" method="post">
-    <table width="300" align="center">
+<form id="findForm" name="findForm" action="gate_enter.php" method="post">
+<table width="300" align="center">
         <tr>
-            <td colspan="2" align="center">Request Form</td>
+            <td colspan="2" align="center">Fast Enter Form</td>
         </tr>
          <tr>
             <td>Enter ID: </td>
@@ -49,25 +51,25 @@
         <tr>   
         
         <tr>
-            <td>Enter a Task: </td>
-            <td><input type="text" name="task" maxlength="30" /></td>
+            <td>Enter A Car Number: </td>
+            <td><input type="text" name="carNumber" maxlength="30" /></td>
         </tr>
         <tr>   
         
         <tr>
-            <td>Enter a car number: </td>
-            <td><input type="text" name="carNumber" /></td>
+            <td>Enter A Car Model: </td>
+            <td><input type="text" name="model" /></td>
         </tr>
         
         <tr>
-            <td>Enter a Model: </td>
-            <td><input type="text" name="model" maxlength="30" /></td>
+            <td>Enter Approved By: </td>
+            <td><input type="text" name="ApprovedBy" maxlength="30" /></td>
         </tr>
         <tr>   
         
         <tr>
-            <td>Enter a phone number: </td>
-            <td><input type="text" name="phoneNumber" maxlength="12" /></td>
+            <td>Enter Reason: </td>
+            <td><input type="text" name="reason" maxlength="12" /></td>
         </tr>
         <tr>   
         
@@ -77,7 +79,6 @@
         </tr>
     </table>
 </form>
-
 
 </div>
 
