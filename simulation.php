@@ -51,20 +51,20 @@ else{
 $row = mysql_fetch_array($result);
 
 $userID = $row['userID'];
-Print "$userID<br>";
+Print "User ID - $userID<br>";
 $firstName = $row['firstName'];
-Print "$firstName<br>";
+Print "First Name - $firstName<br>";
 $lastName = $row['lastName'];
-Print "$lastName<br>";
+Print "Last Name - $lastName<br>";
 $model = $row['model'];
-Print "$model<br>";
+Print "Model - $model<br>";
 $approvedBy = "Chief";
-Print "$approvedBy<br>";
+Print "Approved By - $approvedBy<br>";
 
 $query = "INSERT INTO journal ( userID,firstName,lastName,carNumber,model,approvedBy )
 VALUES ( '$userID', '$firstName','$lastName','$carNumber','$model','$approvedBy' );";
 mysql_query($query);
-Print "Open!";
+Print "OPEN!";
 }
 mysql_close();
 

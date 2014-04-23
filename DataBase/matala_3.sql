@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 16, 2014 at 06:29 PM
+-- Generation Time: Apr 23, 2014 at 08:25 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -47,7 +47,10 @@ CREATE TABLE IF NOT EXISTS `approvedtable` (
 --
 
 INSERT INTO `approvedtable` (`RequestID`, `userID`, `firstName`, `lastName`, `task`, `carNumber`, `model`, `date`, `ApprovedBy`, `phoneNumber`, `status`, `approved number`) VALUES
-(10, 111, 'mama', 'mama', '', '1212', '', '2014-03-31 21:14:56', 'Chief Officer', '', 'Approved', 0);
+(0, 111222333, 'Moti', 'Geva', 'Lector', '222444', 'BMW', '2014-04-23 20:02:01', 'Chief Officer', '0523334554', 'Approved', 0),
+(2, 900999444, 'Alexander', 'Domoshnicky', 'Lector', '203034', 'Mercedes', '2014-04-23 20:03:43', 'Chief Officer', '0543589888', 'Approved', 0),
+(3, 999998812, 'Sivan', 'Koen', 'Student', '443344', 'Suzuki', '2014-04-23 20:05:09', 'Chief Officer', '0502332433', 'Approved', 0),
+(5, 321768695, 'Alexey', 'Gukov', 'Student', '333999', 'porshe', '2014-04-23 20:07:19', 'Chief Officer', '0523438977', 'Approved', 0);
 
 -- --------------------------------------------------------
 
@@ -67,14 +70,7 @@ CREATE TABLE IF NOT EXISTS `blacklist` (
 --
 
 INSERT INTO `blacklist` (`userID`, `firstName`, `lastName`, `reason`) VALUES
-('wq', 'wq', 'qw', ''),
-('', 'w', 'qw', ''),
-('111', 'max', 'kakas', ''),
-('1', '', '', ''),
-('0', 'q', 'q', ''),
-('111', '', '', ''),
-('111', '111', '111', ''),
-('0', 'wq', 'qw', '');
+('666777888', 'Vladimir', 'Putin', '');
 
 -- --------------------------------------------------------
 
@@ -97,8 +93,9 @@ CREATE TABLE IF NOT EXISTS `journal` (
 --
 
 INSERT INTO `journal` (`userID`, `firstName`, `lastName`, `carNumber`, `model`, `date`, `approvedBy`) VALUES
-('0', 'wq', 'qw', 'qw', '', '2014-04-05 01:33:54', 'Chief'),
-('qq', 'qq', 'qqq', 'qq', 'q', '2014-04-15 18:48:11', 'q');
+('111222333', 'Moti', 'Geva', '222444', 'BMW', '2014-04-23 20:17:35', ''),
+('303333333', 'Silvan', 'Lansberg', '122112', 'Subaru', '2014-04-23 20:18:40', 'Chief'),
+('111222333', 'Moti', 'Geva', '222444', 'BMW', '2014-04-23 20:23:11', 'Chief');
 
 -- --------------------------------------------------------
 
@@ -129,27 +126,15 @@ CREATE TABLE IF NOT EXISTS `requesttable` (
 --
 
 INSERT INTO `requesttable` (`requestID`, `userID`, `firstName`, `lastName`, `task`, `carNumber`, `model`, `date`, `approvedBy`, `phoneNumber`, `status`) VALUES
-(0, 0, 'q', 'q', 'q', '', '', '2014-03-30 21:03:32', 'Chief Officer', '', 'Blocked'),
-(1, 0, 'w', 'w', 'w', '', '', '2014-03-30 21:03:48', 'Chief Officer', '', 'Approved'),
-(2, 0, 'wq', 'qw', 'qw', 'qw', '', '2014-03-30 21:03:55', 'Chief Officer', '', 'Approved'),
-(3, 0, 'w', 'qw', 'qw', 'qw', 'qw', '2014-03-30 21:04:15', 'Chief Officer', 'qw', 'Blocked'),
-(4, 111, 'max', 'kakas', '', '', '', '2014-03-31 20:27:03', 'Chief Officer', '', 'Blocked'),
-(5, 0, '', '', '', '', '', '2014-03-31 21:08:39', 'Chief Officer', '', 'Rejected'),
-(6, 0, '', '', '', '', '', '2014-03-31 21:08:47', '', '', 'wait'),
-(7, 111, 'kakas', '', '', '', '', '2014-03-31 21:09:34', 'Chief Officer', '', 'Approved'),
-(8, 111, '', '', '', '', '', '2014-03-31 21:11:29', 'Chief Officer', '', 'Approved'),
-(9, 111, '', '', '', '', '', '2014-03-31 21:14:26', 'Chief Officer', '', 'Blocked'),
-(10, 111, '', '', '', '', '', '2014-03-31 21:14:56', 'Chief Officer', '', 'Approved'),
-(11, 1, '', '', '', '', '', '2014-03-31 21:15:09', '', '', 'wait'),
-(12, 111, '111', '111', '', '', '', '2014-03-31 21:15:17', 'Chief Officer', '', 'Approved'),
-(13, 1, '', '', '', '', '', '2014-03-31 21:17:26', 'Chief Officer', '', 'Blocked'),
-(14, 1, '', '', '', '', '', '2014-03-31 21:18:05', '', '', 'wait'),
-(15, 1, '', '', '', '', '', '2014-03-31 21:19:31', '', '', 'wait'),
-(16, 321546574, 'Maxim', 'Kleb', 'Student', '202020', 'Suzuki', '2014-04-15 18:01:07', 'Chief Officer', '0524702899', 'Approved'),
-(17, 0, 'q', 'q', 'q', 'qq', 'q', '2014-04-16 16:51:54', '', 'q', 'wait'),
-(18, 0, 'qasd', 'qas', 'q', 'qq', 'q', '2014-04-16 16:56:18', '', 'q', 'wait'),
-(19, 0, '', '', '', '', '', '2014-04-16 17:07:56', '', '', 'wait'),
-(20, 0, '', '', '', '', '', '2014-04-16 17:08:11', '', '', 'wait');
+(0, 111222333, 'Moti', 'Geva', 'Lector', '222444', 'BMW', '2014-04-23 20:02:01', 'Chief Officer', '0523334554', 'Approved'),
+(1, 999888777, 'Avi', 'Arad', 'Student', '102020', 'Toyota', '2014-04-23 20:02:57', 'Chief Officer', '0523333999', 'Rejected'),
+(2, 900999444, 'Alexander', 'Domoshnicky', 'Lector', '203034', 'Mercedes', '2014-04-23 20:03:43', 'Chief Officer', '0543589888', 'Approved'),
+(3, 999998812, 'Sivan', 'Koen', 'Student', '443344', 'Suzuki', '2014-04-23 20:05:09', 'Chief Officer', '0502332433', 'Approved'),
+(4, 666777888, 'Vladimir', 'Putin', 'Student', '111111', 'Lada', '2014-04-23 20:05:59', 'Chief Officer', '0509988331', 'Blocked'),
+(5, 321768695, 'Alexey', 'Gukov', 'Student', '333999', 'porshe', '2014-04-23 20:07:19', 'Chief Officer', '0523438977', 'Approved'),
+(6, 589457689, 'David', 'Aron', 'Student', '999888', 'Shkoda', '2014-04-23 20:08:11', '', '0529898777', 'wait'),
+(7, 499499499, 'Maor', 'Grev', 'Student', '393399', 'Fiat', '2014-04-23 20:12:07', '', '0524782882', 'wait'),
+(8, 898989899, 'Ami', 'Magen', 'Student', '233223', 'Subaru', '2014-04-23 20:13:01', '', '0577887781', 'wait');
 
 -- --------------------------------------------------------
 
@@ -170,10 +155,10 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`username`, `password`, `type`, `salt`) VALUES
-('', '', '', ''),
-('q', '719eceed0bd171972ae475334c03902cec7314237f90b8f2d79f332ed8b651a9', 'admin', 'c27'),
-('w', 'ffc66ece8a1abf12b601c8d4e1d7340bd2c5b1f1237b9dc69afe7ce2783e26e6', 'r', 'bb7'),
-('www', '095d23ee9041277180a878b6687822eed2d5449cb275e62eb57d4700789bde97', 'secretary', '0e8');
+('admin', 'a16a1d765a140fead88c25e2cf5565bf58c8e013e6fe4e5fa568e212d98a8d02', 'admin', '178'),
+('chief', '75339f814e2aed24e99d9ba8ec91b7467842090b8d4adfe2cd0a33d5caca731e', 'chief', '5f2'),
+('gate', '038abcca167f2aa49f420e2a99dce5741a8393e45bf5275db4bffbc081510ae3', 'gate', 'e2c'),
+('secretary', 'e85b6b5fdc5005bc4e48551eac254931ef7de316019c71d34022162bc1bafa93', 'secretary', '52d');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

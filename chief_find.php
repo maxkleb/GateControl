@@ -25,10 +25,7 @@
 <INPUT type="submit" value="Search by ID"> 
 </FORM>
 
-<br>
-<FORM METHOD="request" action="secretary_request.html">
-<INPUT type="submit" value="Submition request">
-</FORM>
+
 
 </div>
 
